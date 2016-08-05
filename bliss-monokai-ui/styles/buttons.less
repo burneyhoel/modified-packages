@@ -1,0 +1,58 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.btn-background (@color, @hover-color, @selected-color, @text-color) {
+  color: @text-color;
+  background-color: @color;
+  border-bottom: solid 1px darken(@color, 2%);
+  &:hover {
+    color: @base-white;
+    background-color: lighten(@color, 2%);
+  }
+}
+
+.btn-variant (@color) {
+  @bg: darken(@color, 10%);
+  @hover: @color;
+  @selected: @color;
+
+  .btn-background(@bg, @hover, @selected, @base-white);
+}
+
+.btn {
+  .btn-background(
+    @button-background-color,
+    @button-background-color-hover,
+    @button-background-color-selected,
+    @text-color
+  );
+}
+
+.btn.btn-primary { .btn-variant(@background-color-info); }
+.btn.btn-info    { .btn-variant(@background-color-info); }
+.btn.btn-success { .btn-variant(@background-color-success); }
+.btn.btn-warning { .btn-variant(@background-color-warning); }
+.btn.btn-error   { .btn-variant(@background-color-error); }
+
+.caret {
+  border-top: 5px solid @base-white;
+  margin-top: -1px;
+}
+
+.btn-default:active,
+.btn-defailt:focus {
+  background: none;
+}
+
+button.icon:hover {
+  color: @base-white;
+}
+.btn-default:hover { border: none;}
+.btn-group > .btn {
+  border-left:  1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+button.selected {
+            color:@text-color;
+        }

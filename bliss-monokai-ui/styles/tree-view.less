@@ -1,0 +1,85 @@
+@import "ui-variables";
+
+.tree-view {
+  font-size: @font-size;
+   background: @tree-view-background-color;
+
+  .project-root > .header.list-item {
+    color: @base-blue;
+    margin-top: 10px;
+  }
+
+  // START SUBTLE GIT STATUS
+
+  .git-status-bullet(@color) {
+    &:before {
+      content: "";
+      position: relative;
+      float: left;
+      margin: 10px -20px 0 -15px;
+      background-color: @color;
+      border-radius: 100%;
+      width: 4px;
+      height: 4px;
+    }
+  }
+
+  .directory {
+    &.status-added .list-item:before {
+      color: @base-green;
+    }
+    &.status-modified .list-item:before {
+      color: @base-orange;
+    }
+  }
+
+  .list-group .selected::before, .list-tree .selected::before {
+    background-color: @tree-view-background-color;
+  }
+
+  .list-group li:not(.list-nested-item).selected,
+  .list-tree li:not(.list-nested-item).selected,
+  .list-group li.list-nested-item.selected > .list-item,
+  .list-tree li.list-nested-item.selected > .list-item,
+  .project-root li:not(.list-nested-item).selected,
+  .project-root li.list-nested-item.selected > .list-item {
+    color: @base-white;
+    &.status-modified { .git-status-bullet(@text-color-modified); }
+    &.status-added  { .git-status-bullet(@text-color-added); }
+    &.status-removed { .git-status-bullet(@text-color-removed); }
+  }
+
+  .list-group li.file:not(.list-nested-item).status-modified,
+  .list-tree li.file:not(.list-nested-item).status-modified,
+  .list-group li.file.list-nested-item.status-modified > .list-item,
+  .list-tree li.file.list-nested-item.status-modified > .list-item,
+  .list-group li.directory:not(.list-nested-item).status-modified,
+  .list-tree li.directory:not(.list-nested-item).status-modified,
+  .list-group li.directory.list-nested-item.status-modified > .list-item,
+  .list-tree li.directory.list-nested-item.status-modified > .list-item,
+  .list-group li.file:not(.list-nested-item).status-added,
+  .list-tree li.file:not(.list-nested-item).status-added,
+  .list-group li.file.list-nested-item.status-added > .list-item,
+  .list-tree li.file.list-nested-item.status-added > .list-item,
+  .list-group li.directory:not(.list-nested-item).status-added,
+  .list-tree li.directory:not(.list-nested-item).status-added,
+  .list-group li.directory.list-nested-item.status-added > .list-item,
+  .list-tree li.directory.list-nested-item.status-added > .list-item {
+    color: @text-color;
+      &.status-modified {
+        .git-status-bullet(@text-color-modified);
+      }
+      &.status-added  {
+        .git-status-bullet(@text-color-added);
+      }
+      &.status-removed {
+        .git-status-bullet(@text-color-removed);
+      }
+    &.selected {
+      color: @base-white;
+    }
+  }
+
+  // END SUBTLE GIT STATUS
+
+}

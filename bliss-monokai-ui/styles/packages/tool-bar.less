@@ -1,0 +1,19 @@
+@import "../ui-variables";
+
+.tool-bar {
+  .btn {
+    color: @base-gray;
+    text-shadow: 0 1px darken(@base-gray-darkest, 10%);
+
+    &:hover { color: @text-color-highlight; }
+  }
+  
+  &.tool-bar-vertical .tool-bar-spacer {
+    border-bottom: 1px solid @base-gray-darker;
+  }
+
+  &.tool-bar-24px.tool-bar-vertical .tool-bar-spacer {
+    width: 40px;
+    margin-left: 8px;
+  }
+}

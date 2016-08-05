@@ -1,0 +1,101 @@
+@base-gray: #656565;
+@base-gray-dark     : darken(@base-gray, 20%);
+@base-gray-darker   : darken(@base-gray, 25%);
+@base-gray-darkest  : darken(@base-gray, 30%);
+@base-gray-light    : lighten(@base-gray, 20%);
+@base-gray-lighter  : lighten(@base-gray, 25%);
+@base-gray-lightest : lighten(@base-gray, 30%);
+
+@base-white  : #fff;
+@base-blue   : #66d9ef;
+@base-green  : #a0e22a;
+@base-yellow : #e6db74;
+@base-orange : #ffa500;
+@base-red    : #f92672;
+@base-purple : #ae81ff;
+
+@text-color: @base-gray-light;
+@text-color-subtle: @base-gray;
+@text-color-highlight: @base-blue;
+@text-color-selected: @base-white;
+@text-color-info: @base-blue;
+@text-color-success: @base-green;
+@text-color-warning: @base-orange;
+@text-color-error: @base-red;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: @base-blue;
+@background-color-success: @base-green;
+@background-color-warning: @base-orange;
+@background-color-error: @base-red;
+@background-color-highlight: @base-gray-darkest;
+@background-color-selected: @base-gray-dark;
+@app-background-color: @base-gray-dark;
+
+@base-background-color: @base-gray-darkest;
+@base-border-color: darken(@base-gray-darkest, 0.5%);
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: darken(@base-gray-darkest, 0.5%);
+
+@input-background-color: darken(@base-gray, 27.5%);
+@input-border-color: darken(@input-background-color, 1.5%);
+
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: @base-background-color;
+@inset-panel-border-color: @base-border-color;
+
+@panel-heading-background-color: @base-gray-dark;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+@overlay-background-color: @base-background-color;
+@overlay-border-color: @base-background-color;
+
+@button-background-color: @input-background-color;
+@button-background-color-hover: lighten(@button-background-color, 3%);
+@button-background-color-selected: @base-gray-dark;
+@button-border-color: @input-background-color;
+
+@tab-bar-background-color: @base-background-color;
+@tab-background-color: @base-gray-darker;
+@tab-background-color-active: @base-gray-darker;
+@tab-border-color: @base-gray-dark;
+@tab-bar-bottom-border-color: @base-border-color;
+
+@tree-view-background-color: @base-gray-darker;
+@tree-view-border-color: @base-border-color;
+
+@scrollbar-background-color: @tree-view-background-color;
+@scrollbar-color: @base-gray-dark;
+
+@ui-site-color-1: @base-green;
+@ui-site-color-2: @base-blue;
+@ui-site-color-3: @base-orange;
+@ui-site-color-4: @base-purple;
+@ui-site-color-5: @base-yellow;
+
+
+// Sizes
+
+@font-size: 11px;
+@input-height: 32px;
+@input-font-size: 1.2em;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+
+@tab-height: 26px;
+
+@font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
